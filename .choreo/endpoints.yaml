@@ -1,0 +1,8 @@
+ersion: 0.1
+
+endpoints:
+- name: order
+  port: 9091
+  type: REST
+  networkVisibility: Public
+  context: /
