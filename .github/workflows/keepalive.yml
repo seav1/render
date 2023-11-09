@@ -1,0 +1,39 @@
+name: keepalive
+
+on:
+  push:
+    branches: [ "main" ]
+    
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.0.0
+        with:
+          fetch-depth: 1
+          
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 2
+          
+      - name: Auto-commit keeps choreo alive
+        run: |
+          git config --local user.email "abc@gmail.com"
+          git config --local user.name "${{ github.actor }}"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git pull --rebase
+          git commit --allow-empty -m "a commit per 2 hours to keep choreo alive"
+          git push
