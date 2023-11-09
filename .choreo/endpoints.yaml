@@ -2,7 +2,7 @@ ersion: 0.1
 
 endpoints:
 - name: order
-  port: 9091
+  port: 3000
   type: REST
   networkVisibility: Public
   context: /
