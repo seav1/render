@@ -2,7 +2,7 @@ version: 0.1
 
 endpoints:
 - name: x
-  port: 3000
+  port: 8080
   type: REST
   networkVisibility: Public
   context: /
