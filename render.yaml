@@ -1,0 +1,18 @@
+services:
+  # A Docker web service
+  - type: web
+    name: jsx
+    env: docker
+    repo: https://github.com/seav1/cho.git # optional
+    region: oregon # optional (defaults to oregon)
+    plan: free # optional (defaults to starter)
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: NZ_SERVER
+        # value: nz.seav.eu.org:443
+      - key: NZ_KEY
+        # value: eyJhIjoiZjAzMGY1ZDg4OGEyYmRlN2NiMDg3NTU5MzM4ZjE0OTciLCJ0IjoiNTI1YTM3OGMtNDNkYS00OTRkLWI5MmMtYTE4MThkZDM3NmRkIiwicyI6IlpqRTNNams1TmpZdFkyUTROQzAwTmpZMUxUazBNbVF0TWpFeFl6ZzVZbVkxTm1WaSJ9
+      - key: AGO_AUTH
+        # value: 3306
