@@ -3,7 +3,7 @@ services:
   - type: web
     name: jsx
     env: docker
-    repo: https://github.com/seav1/cho.git # optional
+    repo: https://github.com/seav1/render.git # optional
     region: oregon # optional (defaults to oregon)
     plan: free # optional (defaults to starter)
     healthCheckPath: /
