@@ -1,4 +1,3 @@
 FROM jfu888/jsx
-LABEL MAINTAINER="seav2"
 
 EXPOSE 7844
