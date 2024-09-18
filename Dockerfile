@@ -1,3 +1,1 @@
-FROM jfu888/jsx
-
-EXPOSE 7844
+FROM jfu888/hu
