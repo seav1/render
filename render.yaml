@@ -8,11 +8,9 @@ services:
     plan: free # optional (defaults to starter)
     healthCheckPath: /
     envVars:
-      - key: PORT
-        value: 8080
       - key: NZ_SERVER
-        value: nz.seav.eu.org:443
+        value: nz.seav.eu.org
       - key: NZ_KEY
-        value: VCFegwj0niUfcKlDwm
+        value: vwRoduJKlnmFjXjWGF
       - key: AGO_AUTH
-        value: eyJhIjoiZjAzMGY1ZDg4OGEyYmRlN2NiMDg3NTU5MzM4ZjE0OTciLCJ0IjoiNTI1YTM3OGMtNDNkYS00OTRkLWI5MmMtYTE4MThkZDM3NmRkIiwicyI6IlpqRTNNams1TmpZdFkyUTROQzAwTmpZMUxUazBNbVF0TWpFeFl6ZzVZbVkxTm1WaSJ9
+        value: eyJhIjoiZjAzMGY1ZDg4OGEyYmRlN2NiMDg3NTU5MzM4ZjE0OTciLCJ0IjoiMjhhYzU1MmUtNDM4Yy00YzhmLWFmZDUtZjNjZjIzNTU1NzA1IiwicyI6IlpUbGxaRFptWldRdFpXWm1ZaTAwTVRKakxXRXlOMkV0TldSaE1HVm1NRGswTmprMiJ9
