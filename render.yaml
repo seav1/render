@@ -1,7 +1,7 @@
 services:
   # A Docker web service
   - type: web
-    name: jsx
+    name: hviuit
     env: docker
     repo: https://github.com/seav1/render.git # optional
     region: oregon # optional (defaults to oregon)
